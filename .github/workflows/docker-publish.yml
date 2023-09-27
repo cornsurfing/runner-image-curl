@@ -83,7 +83,7 @@ jobs:
           cache-to: type=gha,mode=max
           build-args: |
             TARGETOS=linux
-            TARGETARCH=x64
+            TARGETARCH=amd64
             RUNNER_VERSION=2.309.0
 
       # Sign the resulting Docker image digest except on PRs.
