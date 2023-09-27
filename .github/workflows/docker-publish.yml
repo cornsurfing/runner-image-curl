@@ -81,10 +81,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          build-args:
-            - TARGETOS=linux
-            - TARGETARCH=x64
-            - RUNNER_VERSION=2.309.0
+          build-args: TARGETOS=linux, TARGETARCH=x64, RUNNER_VERSION=2.309.0
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
